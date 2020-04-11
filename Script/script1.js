@@ -25,6 +25,7 @@ LiseMacquart = ["La fortune de Rougon","Le ventre de Paris","La joie de vivre"];
 PaulineQuenu = LiseMacquart;
 EtienneLantier = ["L'assomoir","Germinal"];
 ClaudeLantier = ["L'assomoir","Le ventre de Paris","L'Oevre"];
+JacquesLantier = ["La bête humaine"];
 Nana = ["L'assomoir","Nana"];
 
 
@@ -122,6 +123,9 @@ function displayAnswer(character){
         case 'Claude Lantier':
             alert(character+' appears in: '+ClaudeLantier);
             break;
+        case 'Jacques Lantier':
+                alert(character+' appears in: '+JacquesLantier);
+                break;
         case 'Nana':
             alert(character+' appears in: '+Nana);
             break;
