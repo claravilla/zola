@@ -41,8 +41,8 @@ var radioAnswer = document.querySelectorAll("input");
 function setCharacter() {
     for (i=0;i<radioAnswer.length;i++) {
         if (radioAnswer[i].checked) {
-            document.getElementById('finder').classList.add('accordianHide');
-            document.getElementById('resultParagraph').classList.remove('accordianHide');
+            document.getElementById('finder').classList.add('accordionHide');
+            document.getElementById('resultParagraph').classList.remove('accordionHide');
             characterSelected=radioAnswer[i].value;
             displayAnswer(characterSelected);  
         }
@@ -52,8 +52,8 @@ function setCharacter() {
 
 
 function resetCharacter(){
-    document.getElementById('finder').classList.remove('accordianHide');
-    document.getElementById('resultParagraph').classList.add('accordianHide');  
+    document.getElementById('finder').classList.remove('accordionHide');
+    document.getElementById('resultParagraph').classList.add('accordionHide');  
     for (i=0;i<radioAnswer.length;i++){
         if (radioAnswer[i].checked){
              radioAnswer[i].checked = false;
