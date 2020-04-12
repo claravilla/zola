@@ -22,6 +22,7 @@
 <br>
 <section>
    <h2>Character Finder</h2>
+   <div id="finder">
         <p class="introFinder blueBorder">The maily tree is well known and you can find it anywhere online and also in the books.
        However, I never found the list of books where we find the same character so I created this little form. The books
        are listed in chronological order for the character.
@@ -56,8 +57,15 @@
     <input type="radio" name="character" value="Pauline Quenu">Pauline Quenu</input><br/><br/>
     <button onclick="setCharacter()">Find books</button>
         </div>
+    </div>
 
-<div id='result'></div>
+<div id='resultParagraph' class="accordianHide blueBorder introFinder">
+    <strong>Your result:</strong><br/>
+    <p id="result"></p>
+    <button class="alignCenter" onclick="resetCharacter()">Search again</button>
+    <br/>
+ 
+</div>
 </section>
 
 
