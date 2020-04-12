@@ -130,12 +130,12 @@ article {
     border: thick solid rgb(42, 80, 82);
 }
 
-.accordian {
+.accordion {
     background-color: rgb(179, 178, 191);
     padding: 0px 0px 10px 0px;
     border-radius: 10px;;
 }
-.accordianHide {
+.accordionHide {
     display: none;
 }
 
@@ -144,7 +144,7 @@ article {
     left:50%;
 }
 
-.buttonAccordian {
+.buttonAccordion {
         border: none;
         outline: none;
         margin: none;
