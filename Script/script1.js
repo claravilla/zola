@@ -22,7 +22,7 @@ DesireeMouret = SergeMouret;
 JeanMacquart = ["La debacle", "La Terre"];
 GervaiseMacquart = ["La fortune de Rougon","Le ventre de Paris","L'Assomoir"];
 LisaMacquart = ["La fortune de Rougon","Le ventre de Paris","La joie de vivre"];
-PaulineQuenu = LiseMacquart;
+PaulineQuenu = LisaMacquart;
 EtienneLantier = ["L'assomoir","Germinal"];
 ClaudeLantier = ["L'assomoir","Le ventre de Paris","L'Oevre"];
 JacquesLantier = ["La bête humaine"];
@@ -32,23 +32,38 @@ Nana = ["L'assomoir","Nana"];
 
 
 //get the value from the radio button then call the displayanswer function
+var radioAnswer = document.querySelectorAll("input");
+
+
+
+
 
 function setCharacter() {
-    var radioAnswer = document.querySelectorAll("input");
     for (i=0;i<radioAnswer.length;i++) {
         if (radioAnswer[i].checked) {
+            document.getElementById('finder').classList.add('accordianHide');
+            document.getElementById('resultParagraph').classList.remove('accordianHide');
             characterSelected=radioAnswer[i].value;
-            displayAnswer(characterSelected);
+            displayAnswer(characterSelected);  
         }
-    }    
+    }
 }
+    
 
 
-
+function resetCharacter(){
+    document.getElementById('finder').classList.remove('accordianHide');
+    document.getElementById('resultParagraph').classList.add('accordianHide');  
+    for (i=0;i<radioAnswer.length;i++){
+        if (radioAnswer[i].checked){
+             radioAnswer[i].checked = false;
+        }
+    }
+}
 
 //use switch to match the character to the right case and write the correct array
 
-
+/*
 function displayAnswer(character){
     switch (character) {
         case 'Tante Dide':
@@ -134,9 +149,10 @@ function displayAnswer(character){
     };
 };
 
+*/
 
+// write underneath the form
 
-/*  write underneath the form
 function displayAnswer(character){
     switch (character) {
         case 'Tante Dide':
@@ -148,7 +164,7 @@ function displayAnswer(character){
         case 'Pascal Rougon':
             document.getElementById('result').textContent = (character+' appears in: '+PascalRougon);
             break;
-        case 'Eugene Rougon':
+        case 'Eugène Rougon':
             document.getElementById('result').textContent = (character+' appears in: '+EugeneRougon);
             break;
         case 'Aristide Rougon':
@@ -166,7 +182,7 @@ function displayAnswer(character){
         case 'Clotilde Rougon':
             document.getElementById('result').textContent = (character+' appears in: '+ClotildeRougon);
             break;
-        case 'Angelique':
+        case 'Angélique':
             document.getElementById('result').textContent = (character+' appears in: '+Angelique);
             break;
         case 'Antoine Macquart':
@@ -175,13 +191,13 @@ function displayAnswer(character){
         case 'Ursule Macquart':
             document.getElementById('result').textContent = (character+' appears in: '+UrsuleMacquart);
             break;
-        case 'Helene Mouret':
+        case 'Hélène Mouret':
             document.getElementById('result').textContent = (character+' appears in: '+HeleneMouret);
             break;   
-        case 'Francois Mouret':
+        case 'François Mouret':
             document.getElementById('result').textContent = (character+' appears in: '+FrancoisMouret);
             break;
-        case 'Silvere Mouret':
+        case 'Silvère Mouret':
             document.getElementById('result').textContent = (character+' appears in: '+SilvereMouret);
             break; 
         case 'Octave Mouret':
@@ -190,14 +206,11 @@ function displayAnswer(character){
         case 'Serge Mouret':
             document.getElementById('result').textContent = (character+' appears in: '+SergeMouret);
             break; 
-        case 'Desiree Mouret':
+        case 'Desirée Mouret':
             document.getElementById('result').textContent = (character+' appears in: '+DesireeMouret);
             break; 
-        case 'Desiree Mouret':
-            document.getElementById('result').textContent = (character+' appears in: '+DesireeMouret);
-            break; 
-        case 'Lise Macquart':
-            document.getElementById('result').textContent = (character+' appears in: '+LiseMacquart);
+        case 'Lisa Macquart':
+            document.getElementById('result').textContent = (character+' appears in: '+LisaMacquart);
             break;
         case 'Pauline Quenu':
             document.getElementById('result').textContent = (character+' appears in: '+PaulineQuenu);
@@ -217,12 +230,14 @@ function displayAnswer(character){
         case 'Nana':
             document.getElementById('result').textContent = (character+' appears in: '+Nana);
             break;
+        case 'Jacques Lantier':
+            document.getElementById('result').textContent = (character+' appears in: '+JacquesLantier);
+            break;
         default:
-            document.getElementById('result').textContent = ('pick someone else');
+            document.getElementById('result').textContent = ('Pick someone else');
     };
 };
 
-*/
 
 //test with an if statement for the answer
 
