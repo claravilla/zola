@@ -21,7 +21,7 @@ SergeMouret = ["La conquête de Plassans","La faute de l'abbé Mouret"];
 DesireeMouret = SergeMouret;
 JeanMacquart = ["La debacle", "La Terre"];
 GervaiseMacquart = ["La fortune de Rougon","Le ventre de Paris","L'Assomoir"];
-LiseMacquart = ["La fortune de Rougon","Le ventre de Paris","La joie de vivre"];
+LisaMacquart = ["La fortune de Rougon","Le ventre de Paris","La joie de vivre"];
 PaulineQuenu = LiseMacquart;
 EtienneLantier = ["L'assomoir","Germinal"];
 ClaudeLantier = ["L'assomoir","Le ventre de Paris","L'Oevre"];
@@ -105,8 +105,8 @@ function displayAnswer(character){
         case 'Desirée Mouret':
             alert(character+' appears in: '+DesireeMouret);
             break; 
-        case 'Lise Macquart':
-            alert(character+' appears in: '+LiseMacquart);
+        case 'Lisa Macquart':
+            alert(character+' appears in: '+LisaMacquart);
             break;
         case 'Pauline Quenu':
             alert(character+' appears in: '+PaulineQuenu);
