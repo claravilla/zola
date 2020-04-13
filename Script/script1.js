@@ -38,17 +38,22 @@ var radioAnswer = document.querySelectorAll("input");
 
 
 
-function setCharacter() {
-    for (i=0;i<radioAnswer.length;i++) {
+function checkRadio (){
+    var checkedRadio = [];
+    for (i=0;i<radioAnswer.length;i++){
         if (radioAnswer[i].checked) {
-            document.getElementById('finder').classList.add('accordionHide');
-            document.getElementById('resultParagraph').classList.remove('accordionHide');
+            checkedRadio.push(i);
             characterSelected=radioAnswer[i].value;
-            displayAnswer(characterSelected);  
         }
     }
+ if (checkedRadio.length===0) {
+     alert('Please select a character');
+ } else {
+    document.getElementById('finder').classList.add('accordionHide');
+    document.getElementById('resultParagraph').classList.remove('accordionHide');
+    displayAnswer(characterSelected); 
+ }
 }
-    
 
 
 function resetCharacter(){
