@@ -46,6 +46,8 @@ document.getElementById('argent').addEventListener('click',function(){
     document.getElementById('argentParagraph').classList.toggle('accordionHide');
 })
 
-
+document.getElementById('ventre').addEventListener('click',function(){
+    document.getElementById('ventreParagraph').classList.toggle('accordionHide');
+})
 
 
